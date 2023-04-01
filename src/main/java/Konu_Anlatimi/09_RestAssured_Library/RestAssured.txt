@@ -1,0 +1,9 @@
+RESTASSURED RESMI SITESI
+https://rest-assured.io/
+
+RESTASSURED BASLAMA
+https://github.com/rest-assured/rest-assured/wiki/GettingStarted#rest-assured
+
+POSTMAN API
+https://www.postman.com/postman/workspace/postman-public-workspace/documentation/12959542-c8142d51-e97c-46b6-bd77-52bb66712c9a
+
