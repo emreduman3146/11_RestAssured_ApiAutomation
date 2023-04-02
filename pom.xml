@@ -11,6 +11,7 @@
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
+        <restAssured>5.3.0</restAssured>
     </properties>
 
     <dependencies>
@@ -18,14 +19,14 @@
         <dependency>
             <groupId>io.rest-assured</groupId>
             <artifactId>rest-assured</artifactId>
-            <version>5.3.0</version>
+            <version>${restAssured}</version>
             <scope>test</scope>
         </dependency>
 
         <dependency>
             <groupId>io.rest-assured</groupId>
             <artifactId>rest-assured-all</artifactId>
-            <version>5.3.0</version>
+            <version>${restAssured}</version>
             <scope>test</scope>
         </dependency>
 
@@ -39,5 +40,6 @@
 
 
     </dependencies>
+
 
 </project>

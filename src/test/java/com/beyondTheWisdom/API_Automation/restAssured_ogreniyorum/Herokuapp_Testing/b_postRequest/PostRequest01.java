@@ -1,6 +1,6 @@
-package com.beyondTheWisdom.API_Automation.Herokuapp_Testing.b_postRequest;
+package com.beyondTheWisdom.API_Automation.restAssured_ogreniyorum.Herokuapp_Testing.b_postRequest;
 
-import com.beyondTheWisdom.API_Automation.Herokuapp_Testing.testbase.TestBase;
+import com.beyondTheWisdom.API_Automation.restAssured_ogreniyorum.Herokuapp_Testing.testbase.TestBase;
 import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
