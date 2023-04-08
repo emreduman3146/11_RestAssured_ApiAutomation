@@ -1,7 +1,7 @@
-package com.beyondTheWisdom.API_Automation.restAssured_ogreniyorum.Herokuapp_Testing.a_getRequests;
+package com.beyondTheWisdom.API_Automation.restAssured_ogreniyorum.Ders.Herokuapp_Testing.a_getRequests;
 
 
-import com.beyondTheWisdom.API_Automation.restAssured_ogreniyorum.Herokuapp_Testing.testbase.TestBase;
+import com.beyondTheWisdom.API_Automation.restAssured_ogreniyorum.Ders.testbase.TestBase;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.hamcrest.Matchers;
@@ -30,7 +30,7 @@ public class Get04 extends TestBase {
   */
 
     @Test
-    public void getRequest01() {
+    public void specMethodu_ile_requestSpecificationObjesi_kullanimi() {
         Response response = given().
                 spec(requestSpecification01).//"https://restful-booker.herokuapp.com/"BASE URL
                 when().

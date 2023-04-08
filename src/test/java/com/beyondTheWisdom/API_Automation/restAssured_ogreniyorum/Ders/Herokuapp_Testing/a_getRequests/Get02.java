@@ -1,13 +1,11 @@
-package com.beyondTheWisdom.API_Automation.restAssured_ogreniyorum.Herokuapp_Testing.a_getRequests;
+package com.beyondTheWisdom.API_Automation.restAssured_ogreniyorum.Ders.Herokuapp_Testing.a_getRequests;
 
-import com.beust.ah.A;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.response.ResponseBody;
 import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
-import static org.testng.Assert.*;
 
 public class Get02 {
 
@@ -22,7 +20,7 @@ public class Get02 {
     */
 
     @Test
-    public void getRequest01()
+    public void requestHeaderKullanimi()
     {
         ContentType contentType= ContentType.JSON;
 
@@ -34,7 +32,7 @@ public class Get02 {
             get("https://restful-booker.herokuapp.com/booking").
         then().
             assertThat().
-                statusCode(200).
+                statusCode(404).
                 contentType("application/json");
     }
 
@@ -48,7 +46,7 @@ public class Get02 {
 
    */
     @Test
-    public void getRequest02()
+    public void response_printlemenin_farkli_yollari()
     {
         //getting data
         Response response =
@@ -99,7 +97,7 @@ public class Get02 {
      */
 
     @Test
-    public void getRequest03()
+    public void responsu_validate_etmek_icin_testNGassertionMethodlarini_kullanmak_zorunda_degiliz()
     {
         Response response=
                 given().

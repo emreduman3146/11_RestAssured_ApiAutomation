@@ -1,4 +1,4 @@
-package com.beyondTheWisdom.API_Automation.restAssured_ogreniyorum.Herokuapp_Testing.a_getRequests;
+package com.beyondTheWisdom.API_Automation.restAssured_ogreniyorum.Ders.Herokuapp_Testing.a_getRequests;
 
 import io.restassured.response.Response;
 import io.restassured.response.ValidatableResponse;
@@ -6,7 +6,6 @@ import org.hamcrest.Matchers;
 import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
-import static io.restassured.RestAssured.urlEncodingEnabled;
 import static org.hamcrest.core.IsEqual.equalTo;
 
 
@@ -34,7 +33,7 @@ public class Get03
         }
      */
     @Test
-    public void getRequest01()
+    public void bodyMethodu_ile_responseBody_validateEtmek__AND__matchersClassiKullanimi()
     {
         Response response=
                 given().

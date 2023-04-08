@@ -1,6 +1,5 @@
-package com.beyondTheWisdom.API_Automation.restAssured_ogreniyorum.Herokuapp_Testing.a_getRequests;
+package com.beyondTheWisdom.API_Automation.restAssured_ogreniyorum.Ders.Herokuapp_Testing.a_getRequests;
 
-import io.restassured.http.Header;
 import io.restassured.http.Headers;
 import io.restassured.response.Response;
 import io.restassured.response.ValidatableResponse;
@@ -22,30 +21,32 @@ public class Get01
     // ve status code:200 mu verify et, body json olmali
 
     @Test
-    public void getRequest01()
+    public void httpGetRequest_atip_responsedaki_statusKodu_dogrula()
     {
 
         given().//pre-conditionlarimiz varsa given()'dan sonra ekleriz
-                when().//action'in yapildigi az
-                get("https://restful-booker.herokuapp.com").//get Request
-                then().//verification kismi
-                statusCode(200);//verify edilen detail
+        when().//action'in yapildigi az
+            get("https://restful-booker.herokuapp.com").//get Request
+        then().//verification kismi
+            statusCode(200);//verify edilen detail
 
 
 
         given().
-                when().//after when(), use END POINT, http request methods kullanılır when()'den sonra
-                get("https://restful-booker.herokuapp.com").//END POINT -get request in postman
-                then().//after then(), do assertion
-                assertThat().
+        when().//after when(), use END POINT, http request methods kullanılır when()'den sonra
+            get("https://restful-booker.herokuapp.com").//END POINT -get request in postman
+        then().//after then(), do assertion
+            assertThat().
                 statusCode(200);
         //assertThat if the status code is 200!!!
 
 
         String responseBody_Pretty=
-                given().
-                when().
-                get("https://restful-booker.herokuapp.com/booking").prettyPrint();
+                        given().
+                        when().
+                            get("https://restful-booker.herokuapp.com/booking").
+                            prettyPrint();
+
 
     }
 
@@ -58,7 +59,7 @@ public class Get01
     }
 
     @Test
-    public void getRequest02(){
+    public void Response_objesi__AND__Headers_objesi_kullanimi(){
 
         Response response=
                 given().
@@ -116,6 +117,27 @@ public class Get01
                 // - assertThat()'den sonra farklı seyleri assert edebiliriz
                         statusCode(200).// statusCode assertion
                         contentType("application/json; charset=utf-8");//content-type assertion
+
+    }
+
+
+    @Test
+    public void ValidatableResponse_objesi_kullanimi()
+    {
+
+        Response response01=herokuApp_getRequest01();
+        response01.prettyPrint();
+
+
+        //ASSERTION OF STATUS CODE
+        ValidatableResponse validatableResponse01=response01.then();//assertion için then() kullanıyourz
+
+
+        validatableResponse01.
+                assertThat().//asserThat=hard assertion(yani 1 hatada test fail olur )
+                // - assertThat()'den sonra farklı seyleri assert edebiliriz
+                        statusCode(200).// statusCode assertion
+                contentType("application/json; charset=utf-8");//content-type assertion
 
     }
 

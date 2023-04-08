@@ -1,0 +1,31 @@
+{
+  "name": "John Doe",
+  "age": 30,
+  "city": "New York",
+  "isEmployed": true,
+  "skills": ["Java", "Python", "JavaScript"],
+  "address": {
+    "street": "123 Main Street",
+    "zipCode": "10001"
+  },
+  "projects": [
+    {
+      "id": 1,
+      "title": "Project 1"
+    },
+    {
+      "id": 2,
+      "title": "Project 2"
+    }
+  ],
+  "pets": [
+    {
+      "type": "Dog",
+      "name": "Buddy"
+    },
+    {
+      "type": "Cat",
+      "name": "Mittens"
+    }
+  ]
+}
