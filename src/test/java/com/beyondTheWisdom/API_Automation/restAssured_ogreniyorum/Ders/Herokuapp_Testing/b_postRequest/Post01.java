@@ -9,7 +9,7 @@ import org.testng.asserts.SoftAssert;
 
 import static io.restassured.RestAssured.given;
 
-public class PostRequest01 extends TestBase {
+public class Post01 extends TestBase {
 
     /*
     Post Request icin;
@@ -27,8 +27,6 @@ public class PostRequest01 extends TestBase {
 
         YOKSA, 400 Bad Request http status code alırız
      */
-
-
 
     /*
     POST SCENARIO:
@@ -54,7 +52,7 @@ public class PostRequest01 extends TestBase {
 
      */
     @Test
-    public void postRequest01()
+    public void hardCoded_stringFormatinda_jsonDatamiz_var__AND__bununla_postRequest_atalim()
     {
         //1.Way - not good
 
@@ -77,7 +75,6 @@ public class PostRequest01 extends TestBase {
                 given().
                     contentType(ContentType.JSON).//get() request'te accept(ContentType.JSON) diyorduk
                     spec(requestSpecification01).//"https://restful-booker.herokuapp.com/"
-                    //auth().basic("admin","password123").
                     body(jsonRequestBody).
                     when().
                     post("booking");
@@ -86,23 +83,6 @@ public class PostRequest01 extends TestBase {
         //yollanan request body yi görmek istiyoruz
         response.prettyPrint();
 
-        /*
-        {
-            "bookingid": 22,
-            "booking": {
-                "firstname": "Sally",
-                "lastname": "Brown",
-                "totalprice": 383,
-                "depositpaid": true,
-                "bookingdates": {
-                    "checkin": "2018-11-30",
-                    "checkout": "2019-09-11"
-                },
-                "additionalneeds": "Wifi"
-            }
-        }
-
-         */
 
         response.
             then().
@@ -112,6 +92,8 @@ public class PostRequest01 extends TestBase {
 
 
         JsonPath jsonPath = response.jsonPath();
+
+
         SoftAssert softAssert=new SoftAssert();
 
         //verify datas
