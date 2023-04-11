@@ -4,12 +4,14 @@ import com.beyondTheWisdom.API_Automation.restAssured_ogreniyorum.Ders.testbase.
 import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 import static io.restassured.RestAssured.given;
 
-public class Post01 extends TestBase {
+public class Post01 extends TestBase
+{
 
     /*
     Post Request icin;
@@ -69,21 +71,24 @@ public class Post01 extends TestBase {
                         "}";
 
 
+
+
+
         //requestSpecification01.pathParam("bookingid",5);' e post yapamayız put patch yapabiliriz
         //post yaparken kullanılmayan id atanır request body'e
         Response response =
                 given().
                     contentType(ContentType.JSON).//get() request'te accept(ContentType.JSON) diyorduk
+                    accept(ContentType.JSON).
                     spec(requestSpecification01).//"https://restful-booker.herokuapp.com/"
                     body(jsonRequestBody).
-                    when().
-                    post("booking");
-
+                when().//action yapildigi zaman
+                    post("booking");//"https://restful-booker.herokuapp.com/booking"
 
         //yollanan request body yi görmek istiyoruz
         response.prettyPrint();
 
-
+        //ASSERTION
         response.
             then().
                 assertThat().
@@ -91,9 +96,11 @@ public class Post01 extends TestBase {
                     contentType(ContentType.JSON);
 
 
+        //json datayi jsonPath objesine atayalim ki json icerisinde gezip isstedigimiz datayi getirebilelim
         JsonPath jsonPath = response.jsonPath();
 
-
+        //ASSERTION BASLIYOR
+        //testng--> hardassertion-softassertion
         SoftAssert softAssert=new SoftAssert();
 
         //verify datas
@@ -106,7 +113,7 @@ public class Post01 extends TestBase {
         softAssert.assertEquals(jsonPath.getString("booking.bookingdates.checkout"),"2019-09-11");
         softAssert.assertEquals(jsonPath.getString("booking.additionalneeds"),"Wifi");
 
-        softAssert.assertAll();
+        softAssert.assertAll();//yapmis oldugun tum soft assertionlarin sonuclarini ban goster---> 9pass 1 fail
 
 
 

@@ -9,7 +9,7 @@ public class TestBase
 {
     //  BASE URL imizi koyacagiz ki ihityaci olan alip
     //spec() isimli methodun icine parametre olarak koysun
-    public static RequestSpecification requestSpecification01,requestSpecification02;//null
+    public static RequestSpecification requestSpecification01,requestSpecification02,requestSpecification03;//null
 
 
 
@@ -24,7 +24,12 @@ public class TestBase
                 setBaseUri("").//BASE URL
                 build();
 
+        requestSpecification03=new RequestSpecBuilder().
+                setBaseUri("https://jsonplaceholder.typicode.com/todos").
+                build();
+
     }
+
 
 
 }

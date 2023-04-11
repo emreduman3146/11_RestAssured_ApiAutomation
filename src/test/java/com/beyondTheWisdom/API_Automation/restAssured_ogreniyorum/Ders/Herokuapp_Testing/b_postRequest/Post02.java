@@ -10,6 +10,7 @@ import org.testng.asserts.SoftAssert;
 
 import java.io.File;
 
+
 import static io.restassured.RestAssured.given;
 
 public class Post02 extends TestBase {
@@ -41,6 +42,8 @@ public class Post02 extends TestBase {
     @Test
     public void jsonDatamizi_JSONObject_classini_kullanarak_olusturalim__AND__postRequest_atalim()
     {
+
+
         /*
           json obesi olusturmamıza yarar JSONObject Class'ı
           for instance:
@@ -51,6 +54,7 @@ public class Post02 extends TestBase {
           bu datayı bir json object yapmak istiyorum
          */
 
+        //JSON DATASI OLUSTURAN CLASSTIR.
         JSONObject jsonBookingdatesObject=new JSONObject();
         jsonBookingdatesObject.put("checkin","2018-11-30");
         jsonBookingdatesObject.put("checkout","2019-09-11");
@@ -64,7 +68,7 @@ public class Post02 extends TestBase {
         jsonRequestBody.put("lastname", "Brown");
         jsonRequestBody.put("totalprice", "383");
         jsonRequestBody.put("depositpaid", "true");
-        jsonRequestBody.put("bookingdates",jsonBookingdatesObject);
+        jsonRequestBody.put("bookingdates",jsonBookingdatesObject);//composition,aggreagtion,asssociation
         jsonRequestBody.put("additionalneeds","Wifi");
 
 
@@ -75,7 +79,7 @@ public class Post02 extends TestBase {
         Response response= given().
                             contentType(ContentType.JSON).
                             spec(requestSpecification01).
-                            body(jsonRequestBody.toString())//body() her zaman String ister
+                            body(jsonRequestBody.toString())//compile-time hatasi vermez // run-time hatasi alabiliriz
                          .when()
                            .post();
 
@@ -107,7 +111,7 @@ public class Post02 extends TestBase {
 
 
     @Test
-    public void stringToJsonObject_yapalim__AND__postRequest_atalim()
+    public void stringToJsonObject_yapalim__AND__postRequest_atalim__AND__extract_path_ile_id_alip_getRequestAtalim()
     {
         String jsonRequestBody="{\n" +
                 "\"firstname\": \"Sally\",\n" +
@@ -121,34 +125,48 @@ public class Post02 extends TestBase {
                 "\"additionalneeds\":\"Wifi\"\n" +
                 "}";
 
+        //STRING TO JSONOBJECT
         JSONObject jsonObject = new JSONObject(jsonRequestBody);
 
         System.out.println(jsonObject);
 
         requestSpecification01.basePath("/booking");
 
-        Response response= given().
+        Response response=
+            given().
                 contentType(ContentType.JSON).
                 spec(requestSpecification01).
                 body(jsonObject.toString())
-                .when()
+            .when()
                 .post();
 
         response.prettyPrint();
 
+
+
+        //ASSERTION
         String bookingID=response.
                 then().
                 assertThat().
-                statusCode(200).
-                contentType(ContentType.JSON).extract().response().path("bookingid").toString();
+                    statusCode(200).
+                    contentType(ContentType.JSON).
+                extract().
+                    response().path("bookingid").toString();
 
 
+        //get request --> baseURL/booking/4845
 
-        requestSpecification01.pathParam("bookingid",bookingID);
 
+        //requestSpecification--> REQUEST ATARKEN(BODY-PARAMS-HEADERS-ENDPOINTS)
+        requestSpecification01.pathParam("bookingid",bookingID);  // BASEURL/BASEPATH/PATHPARAM
+
+
+        //GET REQUEST
         given().
                 spec(requestSpecification01).
-        get("/{bookingid}").prettyPrint();
+        when().
+            get("/{bookingid}").prettyPrint();
+
 
 
 
@@ -159,6 +177,7 @@ public class Post02 extends TestBase {
     @Test
     public void getJSONData_fromFile__AND__postRequest_atalim()
     {
+
 
         // Read JSON data from file
         File jsonFile = new File("src/test/java/com/beyondTheWisdom/API_Automation/restAssured_ogreniyorum/Ders/Herokuapp_Testing/b_postRequest/herokuapp_json_post.json");

@@ -45,8 +45,13 @@ public class Post03 extends TestBase {
     public void pojo_classlari_ile_javaObjectTipinde_jsonData_olusturalim__AND_postRequest_atalim()
     {
 
+        //JSON FORMATINDA DATA OLUSTURALIM
+        //BUNU DA POJO CLASSSLARI YARDIMI ILE YAPALIM
         Bookingdates bookingdates=new Bookingdates("2018-11-30","2019-09-11");
+
         Booking booking=new Booking("Sally","Brown",383,true,bookingdates,"Wifi");
+
+
 
         Response response= given().
                 contentType(ContentType.JSON).

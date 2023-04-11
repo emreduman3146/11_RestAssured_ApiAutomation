@@ -2,3 +2,8 @@
 out
 target
 *.iml
+src/test/java/com/beyondTheWisdom/API_Automation/restAssured_ogreniyorum/Ders/KendiPostmanApimiz/a_getRequests
+Selenium_4_8_3.java
+src/test/java/com/beyondTheWisdom/API_Automation/restAssured_ogreniyorum/Ders/Herokuapp_Testing/c_putRequests
+src/test/java/com/beyondTheWisdom/API_Automation/restAssured_ogreniyorum/Ders/Herokuapp_Testing/pojo/AuthResponsePayload.java
+src/test/java/com/beyondTheWisdom/API_Automation/restAssured_ogreniyorum/Ders/Herokuapp_Testing/pojo/UserCredentials.java
