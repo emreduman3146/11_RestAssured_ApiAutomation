@@ -24,7 +24,7 @@ import lombok.extern.jackson.Jacksonized;
         "bookingdates",
         "additionalneeds"
 })
-public class Booking {
+public class BookingRequestPayload {
 
     @JsonProperty("firstname")
     private String firstname;
@@ -35,7 +35,7 @@ public class Booking {
     @JsonProperty("depositpaid")
     private Boolean depositpaid;
     @JsonProperty("bookingdates")
-    private Bookingdates bookingdates;
+    private BookingDates bookingdates;
     @JsonProperty("additionalneeds")
     private String additionalneeds;
 

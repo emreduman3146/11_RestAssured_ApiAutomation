@@ -1,4 +1,4 @@
-package com.beyondTheWisdom.API_Automation.restAssured_ogreniyorum.Ders.Herokuapp_Testing.a_getRequests;
+package com.beyondTheWisdom.API_Automation.restAssured_ogreniyorum.Ders.Herokuapp_Testing.b_getRequests;
 
 
 import com.beyondTheWisdom.API_Automation.restAssured_ogreniyorum.Ders.testbase.TestBase;
@@ -7,7 +7,6 @@ import io.restassured.response.Response;
 import org.hamcrest.Matchers;
 import org.testng.annotations.Test;
 
-import static io.restassured.RestAssured.basePath;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 

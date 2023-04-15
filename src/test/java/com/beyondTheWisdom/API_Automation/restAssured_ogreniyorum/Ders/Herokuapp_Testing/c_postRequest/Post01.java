@@ -1,10 +1,9 @@
-package com.beyondTheWisdom.API_Automation.restAssured_ogreniyorum.Ders.Herokuapp_Testing.b_postRequest;
+package com.beyondTheWisdom.API_Automation.restAssured_ogreniyorum.Ders.Herokuapp_Testing.c_postRequest;
 
 import com.beyondTheWisdom.API_Automation.restAssured_ogreniyorum.Ders.testbase.TestBase;
 import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
@@ -59,16 +58,16 @@ public class Post01 extends TestBase
         //1.Way - not good
 
         String jsonRequestBody="{\n" +
-                        "\"firstname\": \"Sally\",\n" +
-                        "\"lastname\": \"Brown\",\n" +
-                        "\"totalprice\": 383,\n" +
-                        "\"depositpaid\": true,\n" +
-                        "\"bookingdates\": {\n" +
-                        "\"checkin\": \"2018-11-30\",\n" +
-                        "\"checkout\": \"2019-09-11\"\n" +
-                        "},\n" +
-                        "\"additionalneeds\":\"Wifi\"\n" +
-                        "}";
+                "\"firstname\": \"Sally\",\n" +
+                "\"lastname\": \"Brown\",\n" +
+                "\"totalprice\": 383,\n" +
+                "\"depositpaid\": true,\n" +
+                "\"bookingdates\": {\n" +
+                "\"checkin\": \"2018-11-30\",\n" +
+                "\"checkout\": \"2019-09-11\"\n" +
+                "},\n" +
+                "\"additionalneeds\":\"Wifi\"\n" +
+                "}";
 
 
 
@@ -76,14 +75,18 @@ public class Post01 extends TestBase
 
         //requestSpecification01.pathParam("bookingid",5);' e post yapamayız put patch yapabiliriz
         //post yaparken kullanılmayan id atanır request body'e
-        Response response =
+
+
+        Response response=
                 given().
-                    contentType(ContentType.JSON).//get() request'te accept(ContentType.JSON) diyorduk
-                    accept(ContentType.JSON).
-                    spec(requestSpecification01).//"https://restful-booker.herokuapp.com/"
-                    body(jsonRequestBody).
-                when().//action yapildigi zaman
-                    post("booking");//"https://restful-booker.herokuapp.com/booking"
+                        contentType(ContentType.JSON).
+                        spec(requestSpecification01).
+                        basePath("booking").
+                        body(jsonRequestBody)
+                        .when()
+                        .post();
+
+        response.prettyPrint();
 
         //yollanan request body yi görmek istiyoruz
         response.prettyPrint();

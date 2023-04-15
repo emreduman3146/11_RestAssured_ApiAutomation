@@ -29,7 +29,7 @@ import java.util.Map;
  * No args constructor for use in serialization
  *
  */
-public class Bookingdates
+public class BookingDates
 {
 
     @JsonProperty("checkin")

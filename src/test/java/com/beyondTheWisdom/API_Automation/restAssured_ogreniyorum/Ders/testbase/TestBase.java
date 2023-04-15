@@ -16,6 +16,8 @@ public class TestBase
     @BeforeTest
     public void setUp01()
     {
+
+
         requestSpecification01=new RequestSpecBuilder().
                 setBaseUri("https://restful-booker.herokuapp.com/").//BASE URL
                 build();

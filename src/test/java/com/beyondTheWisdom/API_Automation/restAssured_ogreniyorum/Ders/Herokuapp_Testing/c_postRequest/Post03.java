@@ -1,8 +1,8 @@
-package com.beyondTheWisdom.API_Automation.restAssured_ogreniyorum.Ders.Herokuapp_Testing.b_postRequest;
+package com.beyondTheWisdom.API_Automation.restAssured_ogreniyorum.Ders.Herokuapp_Testing.c_postRequest;
 
 
-import com.beyondTheWisdom.API_Automation.restAssured_ogreniyorum.Ders.Herokuapp_Testing.pojo.Booking;
-import com.beyondTheWisdom.API_Automation.restAssured_ogreniyorum.Ders.Herokuapp_Testing.pojo.Bookingdates;
+import com.beyondTheWisdom.API_Automation.restAssured_ogreniyorum.Ders.Herokuapp_Testing.pojo.BookingRequestPayload;
+import com.beyondTheWisdom.API_Automation.restAssured_ogreniyorum.Ders.Herokuapp_Testing.pojo.BookingDates;
 import com.beyondTheWisdom.API_Automation.restAssured_ogreniyorum.Ders.testbase.TestBase;
 import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
@@ -47,9 +47,9 @@ public class Post03 extends TestBase {
 
         //JSON FORMATINDA DATA OLUSTURALIM
         //BUNU DA POJO CLASSSLARI YARDIMI ILE YAPALIM
-        Bookingdates bookingdates=new Bookingdates("2018-11-30","2019-09-11");
+        BookingDates bookingdates=new BookingDates("2018-11-30","2019-09-11");
 
-        Booking booking=new Booking("Sally","Brown",383,true,bookingdates,"Wifi");
+        BookingRequestPayload booking=new BookingRequestPayload("Sally","Brown",383,true,bookingdates,"Wifi");
 
 
 

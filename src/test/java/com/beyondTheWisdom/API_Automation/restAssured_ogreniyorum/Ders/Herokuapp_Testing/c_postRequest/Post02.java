@@ -1,14 +1,16 @@
-package com.beyondTheWisdom.API_Automation.restAssured_ogreniyorum.Ders.Herokuapp_Testing.b_postRequest;
+package com.beyondTheWisdom.API_Automation.restAssured_ogreniyorum.Ders.Herokuapp_Testing.c_postRequest;
 
 import com.beyondTheWisdom.API_Automation.restAssured_ogreniyorum.Ders.testbase.TestBase;
 import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
+import org.awaitility.Awaitility;
 import org.json.JSONObject;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 import java.io.File;
+import java.util.concurrent.TimeUnit;
 
 
 import static io.restassured.RestAssured.given;
@@ -107,6 +109,8 @@ public class Post02 extends TestBase {
 
         softAssert.assertAll();
 
+
+
     }
 
 
@@ -180,16 +184,16 @@ public class Post02 extends TestBase {
 
 
         // Read JSON data from file
-        File jsonFile = new File("src/test/java/com/beyondTheWisdom/API_Automation/restAssured_ogreniyorum/Ders/Herokuapp_Testing/b_postRequest/herokuapp_json_post.json");
+        File jsonFile = new File("src/test/java/com/beyondTheWisdom/API_Automation/restAssured_ogreniyorum/Ders/Herokuapp_Testing/c_postRequest/herokuapp_json_post.json");
 
         requestSpecification01.basePath("/booking");
 
         Response response= given().
-                contentType(ContentType.JSON).
-                spec(requestSpecification01).
-                body(jsonFile)
-                .when()
-                .post();
+            contentType(ContentType.JSON).
+            spec(requestSpecification01).
+            body(jsonFile)
+            .when()
+            .post();
 
         response.prettyPrint();
 

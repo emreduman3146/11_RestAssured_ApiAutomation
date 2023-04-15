@@ -1,4 +1,4 @@
-package com.beyondTheWisdom.API_Automation.restAssured_ogreniyorum.Ders.Herokuapp_Testing.a_getRequests;
+package com.beyondTheWisdom.API_Automation.restAssured_ogreniyorum.Ders.Herokuapp_Testing.b_getRequests;
 
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
@@ -25,14 +25,14 @@ public class Get02 {
         ContentType contentType= ContentType.JSON;
 
         given().
-            accept("application/json").//json format'ında data kllanmak istiyorum
+            accept("application/json").//json format'ında data almak istiyoruz. bunu servera soyluyoruz.O da bize mumkunse json tipinde data veriyor
             accept(contentType).
             accept(ContentType.JSON).
         when().//http request methods kullanılır when()'den sonra
             get("https://restful-booker.herokuapp.com/booking").
         then().
             assertThat().
-                statusCode(404).
+                statusCode(200).
                 contentType("application/json");
     }
 
@@ -46,12 +46,12 @@ public class Get02 {
 
    */
     @Test
-    public void response_printlemenin_farkli_yollari()
+    public void response_printlemenin_farkli_yollari_NEGATIVE_SCENARIO()
     {
         //getting data
         Response response =
                 given().
-                    accept("application/json").
+                    accept(ContentType.ANY).
                 when().
                     get("https://restful-booker.herokuapp.com/booking/477777777777");
 
@@ -82,7 +82,7 @@ public class Get02 {
         then().
             assertThat().
                 statusCode(404).//Not Found
-                contentType(ContentType.JSON);//data yoka content type ına bakılamaz
+                contentType("text/plain; charset=utf-8");//Response Body --> Not Found
     }
 
     /*

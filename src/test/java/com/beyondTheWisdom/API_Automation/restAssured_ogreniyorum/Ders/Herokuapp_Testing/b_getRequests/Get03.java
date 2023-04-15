@@ -1,4 +1,4 @@
-package com.beyondTheWisdom.API_Automation.restAssured_ogreniyorum.Ders.Herokuapp_Testing.a_getRequests;
+package com.beyondTheWisdom.API_Automation.restAssured_ogreniyorum.Ders.Herokuapp_Testing.b_getRequests;
 
 import io.restassured.response.Response;
 import io.restassured.response.ValidatableResponse;
