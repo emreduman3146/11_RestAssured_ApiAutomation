@@ -39,4 +39,6 @@ public class BookingRequestPayload {
     @JsonProperty("additionalneeds")
     private String additionalneeds;
 
+
+
 }

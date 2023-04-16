@@ -21,14 +21,9 @@
                 "uid": "12384335-d7f3494c-30e9-4833-9558-a7a92020b203"
             },
             {
-                "id": "291235de-23ca-424c-88ce-7a9da3f044bf",
-                "name": "karateFramework",
-                "uid": "12384335-291235de-23ca-424c-88ce-7a9da3f044bf"
-            },
-            {
-                "id": "27d4a8a9-8c5b-4931-9d7c-4bdd45e004c4",
-                "name": "Kendi Spring Projem",
-                "uid": "12384335-27d4a8a9-8c5b-4931-9d7c-4bdd45e004c4"
+                "id": "78fccfc8-6e7f-48e3-a264-58b6fafc6859",
+                "name": "Restful-Booker-Platform",
+                "uid": "12384335-78fccfc8-6e7f-48e3-a264-58b6fafc6859"
             },
             {
                 "id": "805bdb78-97fa-4431-a4bb-3cd3d151ab39",
@@ -36,9 +31,9 @@
                 "uid": "12384335-805bdb78-97fa-4431-a4bb-3cd3d151ab39"
             },
             {
-                "id": "a367cdc3-3c80-44ee-888e-e3b4c0ffcec4",
-                "name": "SeleniumWe",
-                "uid": "12384335-a367cdc3-3c80-44ee-888e-e3b4c0ffcec4"
+                "id": "27d4a8a9-8c5b-4931-9d7c-4bdd45e004c4",
+                "name": "Kendi Spring Projem",
+                "uid": "12384335-27d4a8a9-8c5b-4931-9d7c-4bdd45e004c4"
             },
             {
                 "id": "8f6d6327-b9c9-4cba-bf81-5a0a95aedf5d",
@@ -46,44 +41,19 @@
                 "uid": "12384335-8f6d6327-b9c9-4cba-bf81-5a0a95aedf5d"
             },
             {
-                "id": "7d86ba97-9fd2-4228-bd3b-8ae39a2b963b",
-                "name": "kloia",
-                "uid": "12384335-7d86ba97-9fd2-4228-bd3b-8ae39a2b963b"
-            },
-            {
-                "id": "d819e8df-9d2b-42cb-9c9f-9a69194391ea",
-                "name": "New Collection",
-                "uid": "12384335-d819e8df-9d2b-42cb-9c9f-9a69194391ea"
-            },
-            {
                 "id": "2ddf3c1c-95aa-4f92-91b4-d8fd7fee29ad",
                 "name": "emreduman",
                 "uid": "12384335-2ddf3c1c-95aa-4f92-91b4-d8fd7fee29ad"
             },
             {
-                "id": "b4330bae-753d-421a-910d-dd0131c02495",
-                "name": "Restful-Booker",
-                "uid": "12384335-b4330bae-753d-421a-910d-dd0131c02495"
+                "id": "7d86ba97-9fd2-4228-bd3b-8ae39a2b963b",
+                "name": "kloia",
+                "uid": "12384335-7d86ba97-9fd2-4228-bd3b-8ae39a2b963b"
             },
             {
-                "id": "a05b767f-a906-467e-8acb-95d66686bca1",
-                "name": "postmanPractice",
-                "uid": "12384335-a05b767f-a906-467e-8acb-95d66686bca1"
-            },
-            {
-                "id": "0ed4a56f-8fed-4f48-bbc6-1895b7a4347f",
-                "name": "Weather API",
-                "uid": "12384335-0ed4a56f-8fed-4f48-bbc6-1895b7a4347f"
-            },
-            {
-                "id": "78fccfc8-6e7f-48e3-a264-58b6fafc6859",
-                "name": "Restful-Booker-Platform",
-                "uid": "12384335-78fccfc8-6e7f-48e3-a264-58b6fafc6859"
-            },
-            {
-                "id": "8a74bbdd-4b5d-4ffd-aca4-2b343d3434c7",
-                "name": "Swagger Petstore",
-                "uid": "12384335-8a74bbdd-4b5d-4ffd-aca4-2b343d3434c7"
+                "id": "291235de-23ca-424c-88ce-7a9da3f044bf",
+                "name": "karateFramework",
+                "uid": "12384335-291235de-23ca-424c-88ce-7a9da3f044bf"
             },
             {
                 "id": "26ed0e51-cc9e-4ef2-ad10-8784532a80f0",
@@ -91,9 +61,39 @@
                 "uid": "12384335-26ed0e51-cc9e-4ef2-ad10-8784532a80f0"
             },
             {
+                "id": "a367cdc3-3c80-44ee-888e-e3b4c0ffcec4",
+                "name": "SeleniumWe",
+                "uid": "12384335-a367cdc3-3c80-44ee-888e-e3b4c0ffcec4"
+            },
+            {
+                "id": "d819e8df-9d2b-42cb-9c9f-9a69194391ea",
+                "name": "New Collection",
+                "uid": "12384335-d819e8df-9d2b-42cb-9c9f-9a69194391ea"
+            },
+            {
+                "id": "a05b767f-a906-467e-8acb-95d66686bca1",
+                "name": "postmanPractice",
+                "uid": "12384335-a05b767f-a906-467e-8acb-95d66686bca1"
+            },
+            {
                 "id": "d7e4d0f0-eb63-427c-b29c-d540d0477da7",
                 "name": "API practice",
                 "uid": "12384335-d7e4d0f0-eb63-427c-b29c-d540d0477da7"
+            },
+            {
+                "id": "b4330bae-753d-421a-910d-dd0131c02495",
+                "name": "Restful-Booker",
+                "uid": "12384335-b4330bae-753d-421a-910d-dd0131c02495"
+            },
+            {
+                "id": "0ed4a56f-8fed-4f48-bbc6-1895b7a4347f",
+                "name": "Weather API",
+                "uid": "12384335-0ed4a56f-8fed-4f48-bbc6-1895b7a4347f"
+            },
+            {
+                "id": "8a74bbdd-4b5d-4ffd-aca4-2b343d3434c7",
+                "name": "Swagger Petstore",
+                "uid": "12384335-8a74bbdd-4b5d-4ffd-aca4-2b343d3434c7"
             },
             {
                 "id": "26c86ee4-b93c-4b7e-a9d7-ca84225d7c9a",
@@ -102,6 +102,16 @@
             }
         ],
         "environments": [
+            {
+                "id": "47c641dc-9300-48e2-b373-84254b256162",
+                "name": "New Environment",
+                "uid": "12384335-47c641dc-9300-48e2-b373-84254b256162"
+            },
+            {
+                "id": "27454c80-eb3f-451b-97f3-6e3e6265f380",
+                "name": "herokuapp_mockServer",
+                "uid": "12384335-27454c80-eb3f-451b-97f3-6e3e6265f380"
+            },
             {
                 "id": "40cb976d-b898-4176-8c78-6e0d71dbaf8c",
                 "name": "registration2",
@@ -113,24 +123,14 @@
                 "uid": "12384335-5bc58f3f-b54f-44fe-a02c-331c32543a01"
             },
             {
-                "id": "f8f1955a-c765-4963-8a46-9b159ecb2a2a",
-                "name": "registration",
-                "uid": "12384335-f8f1955a-c765-4963-8a46-9b159ecb2a2a"
-            },
-            {
                 "id": "dedff29c-306e-4c8a-b038-cceedf02ff8d",
                 "name": "herokuapp",
                 "uid": "12384335-dedff29c-306e-4c8a-b038-cceedf02ff8d"
             },
             {
-                "id": "27454c80-eb3f-451b-97f3-6e3e6265f380",
-                "name": "herokuapp_mockServer",
-                "uid": "12384335-27454c80-eb3f-451b-97f3-6e3e6265f380"
-            },
-            {
-                "id": "47c641dc-9300-48e2-b373-84254b256162",
-                "name": "New Environment",
-                "uid": "12384335-47c641dc-9300-48e2-b373-84254b256162"
+                "id": "f8f1955a-c765-4963-8a46-9b159ecb2a2a",
+                "name": "registration",
+                "uid": "12384335-f8f1955a-c765-4963-8a46-9b159ecb2a2a"
             }
         ]
     }

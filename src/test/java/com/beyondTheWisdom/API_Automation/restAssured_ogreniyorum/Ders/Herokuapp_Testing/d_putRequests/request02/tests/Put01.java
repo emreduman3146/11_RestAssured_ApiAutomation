@@ -7,12 +7,11 @@ import io.restassured.response.Response;
 import io.restassured.response.ResponseBody;
 import io.restassured.response.ResponseBodyData;
 import org.testng.annotations.Test;
-import org.testng.asserts.SoftAssert;
 
 import java.io.IOException;
 
-import static com.beyondTheWisdom.API_Automation.restAssured_ogreniyorum.Ders.Herokuapp_Testing.d_putRequests.request02.util.PropertiesReadWrite.*;
-import static com.beyondTheWisdom.API_Automation.restAssured_ogreniyorum.Ders.Herokuapp_Testing.d_putRequests.request02.util.HttpRequestMethodTypes.*;
+import static com.beyondTheWisdom.API_Automation.restAssured_ogreniyorum.Ders.Herokuapp_Testing.d_putRequests.request02.util.PropertiesUtil.*;
+import static com.beyondTheWisdom.API_Automation.restAssured_ogreniyorum.Ders.Herokuapp_Testing.d_putRequests.request02.util.RequestTypes.*;
 import static com.beyondTheWisdom.API_Automation.restAssured_ogreniyorum.Ders.Herokuapp_Testing.d_putRequests.request02.util.ReusableMethods.*;
 import static io.restassured.http.ContentType.JSON;
 import static org.apache.http.HttpStatus.SC_OK;
@@ -35,7 +34,7 @@ public class Put01 extends TestBase
             //Perform the httpRequest + doAssertion + returnTheWantedResponseDetails
             Response postRequest_response=doBasicAssertion(performRequest(requestSpecification01,POST),SC_OK,JSON,Response.class);
 
-            //Store the TOKEN in configuration.properties file so that it can be used/reached easily at next steps
+            //Store the TOKEN in config.properties file so that it can be used/reached easily at next steps
             setProperty("bookingid",postRequest_response.getBody().as(BookingResponsePayload.class).getBookingid());
             //Print in Console
             postRequest_response.prettyPrint();
@@ -62,7 +61,7 @@ public class Put01 extends TestBase
             ResponseBody authResponseBody = doBasicAssertion(performRequest(requestSpecification01,POST),SC_OK,JSON,ResponseBody.class);
             //Deserialization(json --> javaObject)
             AuthResponsePayload authResponsePayload = authResponseBody.as(AuthResponsePayload.class);
-            //Store the TOKEN in configuration.properties file so that it can be used/reached easily at next steps
+            //Store the TOKEN in config.properties file so that it can be used/reached easily at next steps
             setProperty("token",authResponsePayload.getToken());
             //Print in Console
             authResponseBody.prettyPrint();

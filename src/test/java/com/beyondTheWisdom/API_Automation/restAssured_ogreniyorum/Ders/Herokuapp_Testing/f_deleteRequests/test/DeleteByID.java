@@ -2,12 +2,11 @@ package com.beyondTheWisdom.API_Automation.restAssured_ogreniyorum.Ders.Herokuap
 
 import com.beyondTheWisdom.API_Automation.restAssured_ogreniyorum.Ders.Herokuapp_Testing.f_deleteRequests.testbase.TestBase;
 import io.restassured.response.Response;
-import org.openqa.selenium.remote.CommandPayload;
 import org.testng.annotations.*;
 
 import static com.beyondTheWisdom.API_Automation.restAssured_ogreniyorum.Ders.Herokuapp_Testing.f_deleteRequests.objects.Objects.pathParam;
 import static com.beyondTheWisdom.API_Automation.restAssured_ogreniyorum.Ders.Herokuapp_Testing.f_deleteRequests.objects.Objects.token;
-import static com.beyondTheWisdom.API_Automation.restAssured_ogreniyorum.Ders.Herokuapp_Testing.f_deleteRequests.constants.ResponsePayloadMessages.CREATED;
+import static com.beyondTheWisdom.API_Automation.restAssured_ogreniyorum.Ders.Herokuapp_Testing.f_deleteRequests.constants.RespPayloadMsg.CREATED;
 import static com.beyondTheWisdom.API_Automation.restAssured_ogreniyorum.Ders.Herokuapp_Testing.f_deleteRequests.util.HttpRequestsUtil.deleteBooking;
 import static com.beyondTheWisdom.API_Automation.restAssured_ogreniyorum.Ders.Herokuapp_Testing.f_deleteRequests.util.PropertiesReadWrite.getProperty;
 import static org.apache.http.HttpStatus.*;

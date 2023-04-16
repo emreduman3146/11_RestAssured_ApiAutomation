@@ -11,7 +11,7 @@ public class Get02 {
 
     /*
     Positive Scenario
-    when() a getRequest is sent to  given end-point
+    when() ReusableMethods getRequest is sent to  given end-point
     "https://restful-booker.herokuapp.com/booking"
 
     And() Accept Type is "application/json" Request HEADER
@@ -38,7 +38,7 @@ public class Get02 {
 
     /*
    Negative Scenario
-   when() a getRequest is sent to  given end-point
+   when() ReusableMethods getRequest is sent to  given end-point
    "https://restful-booker.herokuapp.com/booking/101"
 
    And() Accept Type is "application/json"
@@ -87,7 +87,7 @@ public class Get02 {
 
     /*
      Negative Scenario
-     when() a getRequest is sent to  given end-point
+     when() ReusableMethods getRequest is sent to  given end-point
      "https://restful-booker.herokuapp.com/booking/1001"
 
      And() Accept Type is "application/json"
@@ -105,7 +105,7 @@ public class Get02 {
                 when().
                     get("https://restful-booker.herokuapp.com/booking/105401");
 
-        response.prettyPrint();//Github'a push edilirken silinir
+        response.prettyPrint();//Github'ReusableMethods push edilirken silinir
 
 
 

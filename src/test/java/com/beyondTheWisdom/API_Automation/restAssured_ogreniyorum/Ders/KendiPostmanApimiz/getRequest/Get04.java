@@ -29,14 +29,14 @@ public class Get04 {
         Response responseBody_payLoad =
                 given().
                         baseUri("https://api.getpostman.com").
-                        basePath("/workspaces").
+                        basePath("workspaces").
                         pathParam("workspaceid", "4bed1ef1-11ef-4abe-875b-0ab979fb80ac").
                         queryParam("apikey", "PMAK-6427aaa996462a5cfa5e494d-84d0bf3654a81e1ae7f1372487c80c588c").
                         header("Accept-Encoding", "gzip, deflate, br").
                         accept(JSON).
                         config(config.logConfig(LogConfig.logConfig().enableLoggingOfRequestAndResponseIfValidationFails())).
                         when().
-                        get("/{workspaceid}").
+                        get("{workspaceid}").
                         then().
                         assertThat().
                         contentType(JSON).
@@ -57,14 +57,14 @@ public class Get04 {
         Response responseBody_payLoad =
                 given().
                         baseUri("https://api.getpostman.com").
-                        basePath("/workspaces").
+                        basePath("workspaces").
                         pathParam("workspaceid", "4bed1ef1-11ef-4abe-875b-0ab979fb80ac").
                         queryParam("apikey", "PMAK-6427aaa996462a5cfa5e494d-84d0bf3654a81e1ae7f1372487c80c588c").
                         header("Accept-Encoding", "gzip, deflate, br").
                         accept(JSON).
                         config(config.logConfig(LogConfig.logConfig().enableLoggingOfRequestAndResponseIfValidationFails())).
                 when().
-                        get("/{workspaceid}").
+                        get("{workspaceid}").
                 then().
                     assertThat().
                         contentType(JSON).
@@ -101,14 +101,14 @@ public class Get04 {
         String responseBody_payLoad =
                 given().
                         baseUri("https://api.getpostman.com").
-                        basePath("/workspaces").
+                        basePath("workspaces").
                         pathParam("workspaceid", "4bed1ef1-11ef-4abe-875b-0ab979fb80ac").
                         queryParam("apikey", "PMAK-6427aaa996462a5cfa5e494d-84d0bf3654a81e1ae7f1372487c80c588c").
                         header("Accept-Encoding", "gzip, deflate, br").
                         accept(JSON).
                         config(config.logConfig(LogConfig.logConfig().enableLoggingOfRequestAndResponseIfValidationFails())).
                         when().
-                        get("/{workspaceid}").
+                        get("{workspaceid}").
                         then().
                         assertThat().
                         contentType(JSON).
@@ -145,14 +145,14 @@ public class Get04 {
         String responseBody_payLoad =
                 given().
                         baseUri("https://api.getpostman.com").
-                        basePath("/workspaces").
+                        basePath("workspaces").
                         pathParam("workspaceid", "4bed1ef1-11ef-4abe-875b-0ab979fb80ac").
                         queryParam("apikey", "PMAK-6427aaa996462a5cfa5e494d-84d0bf3654a81e1ae7f1372487c80c588c").
                         header("Accept-Encoding", "gzip, deflate, br").
                         accept(JSON).
                         config(config.logConfig(LogConfig.logConfig().enableLoggingOfRequestAndResponseIfValidationFails())).
                         when().
-                        get("/{workspaceid}").
+                        get("{workspaceid}").
                         then().
                         assertThat().
                         contentType(JSON).

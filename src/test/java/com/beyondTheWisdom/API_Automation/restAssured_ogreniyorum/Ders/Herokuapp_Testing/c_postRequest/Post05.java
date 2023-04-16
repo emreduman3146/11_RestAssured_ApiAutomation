@@ -32,9 +32,13 @@ public class Post05 extends TestBase
             //STEP02-SERIALIZATION
             //Gson objesi ile yapacagiz.
             GsonBuilder gsonBuilder=new GsonBuilder();
-            gsonBuilder.registerTypeAdapter(BookingResponsePayload.class, new BookingResponsePayload.Deserializer());
+            gsonBuilder.registerTypeAdapter(BookingResponsePayload.class, new BookingResponsePayload.Deserializer());//java konusu inner class
             Gson gson=gsonBuilder.create();
+
+
+            //SERIALIZATION
             String jsonRequestPayload=gson.toJson(bookingRequestPayload);
+
 
             //STEP3->HTTP POST REQUEST OLUSTURALIM.
             Response response=given().
@@ -51,8 +55,10 @@ public class Post05 extends TestBase
             //DESERIALIZATION
             //JSON FORMATINDAKI DATAYI---> JAVA POJO CLASS OBJECT FORMATINA DONUSTURMEK ISTIYORUZ
             BookingResponsePayload bookingResponsePayload=response.getBody().as(BookingResponsePayload.class);
-            BookingResponsePayload bookingResponsePayload1= gson.fromJson(response.getBody().asString().trim(), BookingResponsePayload.class);
-            System.out.println(bookingResponsePayload);
+             System.out.println(bookingResponsePayload);
+
+
+             BookingResponsePayload bookingResponsePayload1=gson.fromJson(response.getBody().asString(),BookingResponsePayload.class);
             System.out.println(bookingResponsePayload1);
 
         //TESTING STEPLERI

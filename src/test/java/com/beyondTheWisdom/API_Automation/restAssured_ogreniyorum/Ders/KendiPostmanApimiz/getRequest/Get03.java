@@ -26,7 +26,7 @@ public class Get03
         Response response=RestAssured.
             given().
                 baseUri("https://api.getpostman.com").
-                basePath("/workspaces").
+                basePath("workspaces").
                 //pathParam("workspaceid", "4bed1ef1-11ef-4abe-875b-0ab979fb80ac").
                 header("X-API-Key","PMAK-6427aaa996462a5cfa5e494d-84d0bf3654a81e1ae7f1372487c80c588c").
                 header("Accept-Encoding","gzip, deflate, br" ).

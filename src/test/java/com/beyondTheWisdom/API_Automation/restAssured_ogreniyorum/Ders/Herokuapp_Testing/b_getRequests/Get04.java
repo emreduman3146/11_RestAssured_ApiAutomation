@@ -17,7 +17,7 @@ public class Get04 extends TestBase {
 
     /*
  positive Scenario:
- When I send a GET REQUEST to REST API END POINT
+ When I send ReusableMethods GET REQUEST to REST API END POINT
  "https://restful-booker.herokuapp.com/booking/5"
  and Accept-type is "applicaiton/json"
  then

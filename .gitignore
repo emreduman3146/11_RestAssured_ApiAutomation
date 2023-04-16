@@ -2,5 +2,6 @@
 out
 target
 *.iml
-src/test/java/com/beyondTheWisdom/API_Automation/restAssured_ogreniyorum/Ders/KendiPostmanApimiz/a_getRequests
 Selenium_4_8_3.java
+/src/test/java/com/beyondTheWisdom/API_Automation/restAssured_ogreniyorum/Odev/
+/src/test/java/com/beyondTheWisdom/API_Automation/restAssured_ogreniyorum/Ders/KendiPostmanApimiz/getRequest/Get05.java

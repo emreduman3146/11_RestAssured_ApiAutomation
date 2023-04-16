@@ -11,8 +11,6 @@ import io.restassured.response.Response;
 import io.restassured.response.ResponseBody;
 import io.restassured.response.ResponseBodyData;
 import io.restassured.specification.RequestSpecification;
-import org.apache.http.HttpStatus;
-import org.codehaus.groovy.transform.SourceURIASTTransformation;
 
 import java.time.ZoneId;
 import java.util.Map;
@@ -110,7 +108,7 @@ public class ReusableMethods
     }
 
 
-    public static Response performRequest(RequestSpecification requestSpecification, HttpRequestMethodTypes requestType)
+    public static Response performRequest(RequestSpecification requestSpecification, RequestTypes requestType)
     {
         //PERFROM REQUEST
         Response response;
