@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="My Test Suite">
+
+    <test name="My Test">
+        <classes>
+            <class name="com.beyondTheWisdom.API_Automation.restAssured_ogreniyorum.Ders.Herokuapp_Testing.f_deleteRequests.test.DeleteByID"/>
+        </classes>
+    </test>
+
+</suite>

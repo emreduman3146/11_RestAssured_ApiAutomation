@@ -20,7 +20,7 @@ public class Post02 extends TestBase {
       /*
     POST SCENARIO:
     AcceptType : json
-    when I post a request
+    when I post ReusableMethods request
     "https://restful-booker.herokuapp.com/"
     request body:
 

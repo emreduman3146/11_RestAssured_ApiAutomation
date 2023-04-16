@@ -3,17 +3,17 @@ package com.beyondTheWisdom.API_Automation.restAssured_ogreniyorum.Ders.Herokuap
 
 import com.beyondTheWisdom.API_Automation.restAssured_ogreniyorum.Ders.testbase.TestBase;
 import io.restassured.http.ContentType;
-import io.restassured.http.Cookie;
 import io.restassured.response.Response;
 import org.testng.annotations.Test;
 
 import java.io.File;
+import java.util.Base64;
 
 import static io.restassured.RestAssured.given;
 
-public class Put01 extends TestBase
-{
 
+public class Put02 extends TestBase
+{
 
     //NORMALDE, ILGILI ENDPOINT(DB'DEKI SQL TABLELAR) UZERINDE API FUNTIONAL TESTING YAPILACAKSA
     //SIRALAMA SU SEKILDE OLMALIDIR
@@ -28,37 +28,22 @@ public class Put01 extends TestBase
                 prettyPrint();
 
 
+        //GET JSON DATA FROM FILE
+        File jsonFile = new File("src/test/java/com/beyondTheWisdom/API_Automation/restAssured_ogreniyorum/Ders/Herokuapp_Testing/d_putRequests/request01/booking.json");
 
-      //locate request body details from file
-      File authorizationCredentials = new File("src/test/java/com/beyondTheWisdom/API_Automation/restAssured_ogreniyorum/Ders/Herokuapp_Testing/d_putRequests/request01/userCredentials.json");
-
-      //Do Post request AND get authentication authenticationToken
-      Response response =
-              given().
-                      contentType(ContentType.JSON).
-                      spec(requestSpecification01).
-                      basePath("auth").
-                      body(authorizationCredentials).
-                      accept(ContentType.JSON)
-              .when()
-                    .post();
-
-    response.prettyPrint();
-
-    String authenticationToken =response.then().extract().body().path("token");
+        //BASIC AUTHENTICATION-USERNAME/PASSWORD
+        String credentials="admin:password123";
+        String encodedCredentialsAsString = Base64.getEncoder().encodeToString(credentials.getBytes());
 
 
-    //GET JSON DATA FROM FILE
-    File jsonFile = new File("src/test/java/com/beyondTheWisdom/API_Automation/restAssured_ogreniyorum/Ders/Herokuapp_Testing/d_putRequests/request01/booking.json");
-
-    Response response2 =
+        Response response2 =
         given().
             spec(requestSpecification01).//https://restful-booker.herokuapp.com/
             basePath("booking/").        //https://restful-booker.herokuapp.com/booking/
             pathParam("id","2").   //https://restful-booker.herokuapp.com/booking/{id}
-            //header("Cookie", "token="+ authenticationToken).//DOGRU AUTHENTICATION
-            cookie("token",authenticationToken).           //DOGRU AUTHENTICATION
-            //cookie("Basic","YWRtaW46cGFzc3dvcmQxMjM=").    //YANLIS AUTHENTICATION
+            //header("Authorization","Basic "+encodedCredentialsAsString).
+            //header("Authorization","Basic YWRtaW46cGFzc3dvcmQxMjM=").
+            auth().preemptive().basic("admin", "password123").
             body(jsonFile).
             contentType(ContentType.JSON).
         when().
@@ -75,6 +60,7 @@ public class Put01 extends TestBase
 
 
     }
+
 
 }
 

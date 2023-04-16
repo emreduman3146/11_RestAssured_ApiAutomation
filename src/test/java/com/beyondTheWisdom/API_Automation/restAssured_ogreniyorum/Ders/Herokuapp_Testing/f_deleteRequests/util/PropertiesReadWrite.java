@@ -1,4 +1,4 @@
-package com.beyondTheWisdom.API_Automation.restAssured_ogreniyorum.Ders.Herokuapp_Testing.d_putRequests.request02;
+package com.beyondTheWisdom.API_Automation.restAssured_ogreniyorum.Ders.Herokuapp_Testing.f_deleteRequests.util;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -14,7 +14,7 @@ public class PropertiesReadWrite
 
     static
     {
-        path = "src/test/java/com/beyondTheWisdom/API_Automation/restAssured_ogreniyorum/Ders/Herokuapp_Testing/d_putRequests/request02/configuration.properties";
+        path = "src/test/java/com/beyondTheWisdom/API_Automation/restAssured_ogreniyorum/Ders/Herokuapp_Testing/f_deleteRequests/config/configuration.properties";
         try
         {
             loadFileIntoProperties(path);
@@ -34,15 +34,10 @@ public class PropertiesReadWrite
     }
 
 
-
-
     public static String getProperty(String key)
     {
         return properties.getProperty(key);
     }
-
-
-
 
 
     public static void setProperty(String key, Object value) throws IOException {
